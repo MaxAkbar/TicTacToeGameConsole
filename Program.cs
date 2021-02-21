@@ -44,16 +44,16 @@ namespace TicTacToeGameConsole
 
         private static int CheckWinner(char[] gameMarkers)
         {
-            // 3.3 If all markers are placed and no winner then it's a draw stop the game
-            if (IsGameDraw(gameMarkers))
-            {
-                return 2;
-            }
-
             // 3.3 If we have a winner, announce who won and stop the game
             if (IsGameWinner(gameMarkers))
             {
                 return 1;
+            }
+
+            // 3.3 If all markers are placed and no winner then it's a draw stop the game
+            if (IsGameDraw(gameMarkers))
+            {
+                return 2;
             }
 
             return 0;
